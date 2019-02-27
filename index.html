@@ -17,21 +17,23 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">E-commerce</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="container">
+            <a class="navbar-brand" href="#">E-commerce</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="mx-1 fas fa-shopping-cart"></i>Canasta</a>
-                </li>
-                <li class="nav-item">
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Salir</button>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="mx-1 fas fa-shopping-cart"></i>Canasta</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Salir</button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -44,59 +46,60 @@
                         <input type="text" class="form-control" placeholder="Buscar camisetas"
                             aria-label="Buscador de camisetas">
                         <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                            <span class="input-group-text"><a href="#"><i class="fas fa-search"></i></a></span>
                         </div>
                     </div>
                 </div>
                 <!-- Categories -->
                 <div class="container d-none d-lg-block">
                     <h6 class="font-weight-bold">Categorías</h6>
-                    <ul class="list-group">
-                        <li class="list-group-item active d-flex justify-content-between align-items-center">
+                    <div class="list-group">
+                        <button type="button"
+                            class="list-group-item active list-group-item-action d-flex justify-content-between align-items-center">
                             Todos
                             <span class="badge badge-pill badge-secondary">100</span>
-                        </li>
+                        </button>
                         <button type="button"
                             class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                             Hombre
                             <span class="badge badge-pill badge-secondary">4</span>
                         </button>
-                        <button
+                        <button type="button"
                             class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                             Mujer
                             <span class="badge badge-pill badge-secondary">12</span>
                         </button>
-                        <button
+                        <button type="button"
                             class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                             Hipster
                             <span class="badge badge-pill badge-secondary">24</span>
                         </button>
-                        <button
+                        <button type="button"
                             class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                             Metal
                             <span class="badge badge-pill badge-secondary">6</span>
                         </button>
-                        <button
+                        <button type="button"
                             class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                             Universidad
                             <span class="badge badge-pill badge-secondary">5</span>
                         </button>
-                        <button
+                        <button type="button"
                             class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                             Deportiva
                             <span class="badge badge-pill badge-secondary">8</span>
                         </button>
-                        <button
+                        <button type="button"
                             class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                             Rayas
                             <span class="badge badge-pill badge-secondary">11</span>
                         </button>
-                        <button
+                        <button type="button"
                             class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                             Apretada
                             <span class="badge badge-pill badge-secondary">19</span>
                         </button>
-                    </ul>
+                    </div>
                 </div>
 
             </div>
@@ -151,7 +154,7 @@
                                     <p class="card-text">La camiseta ideal para hipsters.</p>
                                     <a href="#" class="btn btn-primary">$229 <i class="fas fa-cart-plus"></i></a>
                                     <a href="#" class="btn btn-outline-dark" data-toggle="modal"
-                                        data-target="#exampleModal">Detalles</a>
+                                        data-target="#productModal">Detalles</a>
                                 </div>
                             </div>
                         </div>
@@ -209,24 +212,79 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
+                    </div>
+                    <!-- Product Modal -->
+                    <div class="modal fade" id="productModal" tabindex="-1" role="dialog"
+                        aria-labelledby="productModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="productModalLabel">Hipster Ultimate</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="alert alert-primary" role="alert">
+                                        <i class="fas fa-info-circle"></i> Este producto está agotado.
                                     </div>
-                                    <div class="modal-body">
-                                        ...
+                                    <div class="container px-0">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <img src="https://s3.amazonaws.com/makeitreal/projects/e-commerce/camiseta-1.jpg"
+                                                    alt="Miniatura del producto" class="img-thumbnail">
+                                            </div>
+                                            <div class="col-6">
+                                                <p>Precio: <strong>299</strong></p>
+                                                <p>Clasificación:
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </p>
+                                                <p><span class="badge badge-warning">Hipster</span> <span
+                                                        class="badge badge-secondary">Deportiva</span></p>
+                                                <a class="link" href="#"><i class="fas fa-heart"></i> Agregar a los
+                                                    deseos</a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary"
-                                            data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    <ul class="nav nav-tabs mt-2" id="myTab" role="tablist">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="descrip-tab" data-toggle="tab"
+                                                href="#descrip" role="tab" aria-controls="descrip"
+                                                aria-selected="true">Descripción</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" id="comments-tab" data-toggle="tab" href="#comments"
+                                                role="tab" aria-controls="comments" aria-selected="true">Comentarios</a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content mt-2 px-3" id="myTabContent">
+                                        <div class="tab-pane fade show active" id="descrip" role="tabpanel"
+                                            aria-labelledby="descrip-tab">
+                                            Raw denim you probably haven't heard of them jean shorts Austin.
+                                            Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache
+                                            cliche tempor, williamsburg carles vegan helvetica. Reprehenderit
+                                            butcher retro keffiyeh dreamcatcher synth.
+                                        </div>
+                                        <div class="tab-pane fade" id="comments" role="tabpanel"
+                                            aria-labelledby="comments-tab">
+                                            <ul class="list-group mt-2">
+                                                <li class="list-group-item list-group-item-light">Germán Escobar
+                                                    comentó hace dos días</li>
+                                                <li class="list-group-item">Esta camiseta está increíble, la quiero!
+                                                </li>
+                                            </ul>
+                                            <textarea class="form-control mt-2" id="commentTextarea" rows="2"
+                                                placeholder="Ingresa tu comentario"></textarea>
+                                        </div>
                                     </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Comprar</button>
                                 </div>
                             </div>
                         </div>
